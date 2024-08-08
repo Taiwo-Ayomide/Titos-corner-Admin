@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  
+  .link{
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .leftside {
+    margin-left: 3rem;
+    width: 100%;
+  }
+body {
+  background: radial-gradient();
+}
