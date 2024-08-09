@@ -30,18 +30,21 @@ const Login = () => {
         const accessToken = response.data.accessToken;
         if (accessToken) {
           localStorage.setItem('accessToken', accessToken); // Store accessToken
-          alert('Welcome');
+          alert(`Welcome, ${email}`);
           dispatch(loginSuccess(response.data));
           navigate('/'); // Redirect to homepage
         } else {
+          alert("Your account is not found on our server, please sign up")
           console.error('AccessToken not found in response data');
         }
       } else {
         alert('Login failed');
       }
     } catch (error) {
+      alert('Incorrect Password or Email');
       console.error('Error during login:', error);
     } finally {
+      alert('We cannot process your login. Please try again later');
       setLoading(false); // Reset loading state after the request is completed
     }
   };
