@@ -44,7 +44,6 @@ const Login = () => {
       alert('Incorrect Password or Email');
       console.error('Error during login:', error);
     } finally {
-      alert('We cannot process your login. Please try again later');
       setLoading(false); // Reset loading state after the request is completed
     }
   };

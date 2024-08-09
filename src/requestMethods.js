@@ -6,7 +6,7 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use((config) => {
   const accessToken = localStorage.getItem('accessToken');
-  console.log('Access Token in Axios:', accessToken); // Debugging
+  // console.log('Access Token in Axios:', accessToken); // Debugging
   if (accessToken) {
     config.headers.token = `Bearer ${accessToken}`;
   }
