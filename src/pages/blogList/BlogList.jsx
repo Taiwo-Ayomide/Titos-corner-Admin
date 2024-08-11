@@ -33,7 +33,7 @@ const BlogList = () => {
       const response = await axiosInstance.delete(`/blogs/delete/${id}`, {
         method: 'DELETE',
       });
-      const result = await response.json();
+      const result = await response.data;
       if (response.ok) {
         setBlogs(blogs.filter(blog => blog._id !== id));
       } else {

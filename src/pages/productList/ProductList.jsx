@@ -34,7 +34,7 @@ const ProductList = () => {
       const response = await fetch(`https://titos-corner.onrender.com/api/podcast/delete/${id}`, {
         method: 'DELETE',
       });
-      const result = await response.json();
+      const result = await response.data;
       if (response.ok) {
         setAudios(audios.filter(audio => audio._id !== id));
       } else {

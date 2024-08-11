@@ -33,7 +33,7 @@ const BookList = () => {
       const response = await axiosInstance.delete(`/books/delete/${id}`, {
         method: 'DELETE',
       });
-      const result = await response.json();
+      const result = await response.data;
       if (response.ok) {
         setBooks(books.filter(book => book._id !== id));
       } else {

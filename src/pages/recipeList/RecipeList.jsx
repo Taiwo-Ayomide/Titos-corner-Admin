@@ -33,7 +33,7 @@ const RecipeList = () => {
       const response = await axiosInstance.delete(`/recipe/delete/${id}`, {
         method: 'DELETE',
       });
-      const result = await response.json();
+      const result = await response.data;
       if (response.ok) {
         setRecipes(recipes.filter(recipe => recipe._id !== id));
       } else {
